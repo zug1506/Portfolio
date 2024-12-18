@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un Produit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Créer un Produit</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="marque">Marque</label>
+    <input type="text" id="marque" name="marque" required>
+
+    <label for="reference">Référence</label>
+    <input type="text" id="reference" name="reference" required>
+
+    <label for="categorie">Catégorie</label>
+    <select id="categorie" name="categorie" required>
+        <option value="">-- Choisir une catégorie --</option>
+        {% for categorie in categories %}
+        <option value="{{ categorie.id }}">{{ categorie.nom }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <label for="prix">Prix unitaire TTC</label>
+    <input type="number" id="prix" name="prix" required>
+
+    <label for="tva">TVA (%)</label>
+    <input type="number" id="tva" name="tva" required>
+
+    <button type="submit">Enregistrer</button>
+</form>
+
+</body>
+</html>
