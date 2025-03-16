@@ -1116,6 +1116,108 @@
         
 
 
+
+
+
+
+
+
+        /* 🌎 Réinitialisation et Base */
+    
+
+
+
+
+
+
+/* 🌍 RESPONSIVE DESIGN */
+/* 🖥️ Tablettes et écrans moyens */
+    @media (max-width: 1024px) {
+        .sidebar {
+            width: 220px; /* Réduit la taille de la barre latérale */
+        }
+
+        .content {
+            margin-left: 220px; /* Ajuste le contenu */
+            width: calc(100% - 220px);
+        }
+
+        nav ul li a {
+            font-size: 14px; /* Réduit la taille des liens */
+        }
+    }
+
+    /* 📱 Mobiles (petits écrans) */
+    @media (max-width: 768px) {
+        .sidebar {
+            width: 100%; /* Barre latérale prend toute la largeur */
+            height: auto; /* Ajuste la hauteur */
+            position: relative;
+            padding: 10px;
+        }
+
+        .sidebar img {
+            width: 70px; /* Réduit l'image de profil */
+            height: 75px;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+        }
+
+        .content {
+            margin-left: 0; /* Supprime le décalage */
+            width: 100%;
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 3px;
+        }
+
+        nav ul li a {
+            font-size: 14px;
+            padding: 5px 8px;
+        }
+    }
+
+    /* 📱 Très petits écrans (Smartphones) */
+    @media (max-width: 480px) {
+        .sidebar {
+            text-align: center;
+        }
+
+        .sidebar h2 {
+            font-size: 16px;
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 2px 0;
+        }
+
+        .content {
+            padding: 5px;
+        }
+    }
+
+/* 🏆 Footer Fixé en Bas */
+    .sidebar footer {
+        position: relative;
+        bottom: 10px;
+    }
+
+
         
 
 
