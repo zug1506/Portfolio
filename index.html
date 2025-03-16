@@ -1123,99 +1123,83 @@
 
 
         /* 🌎 Réinitialisation et Base */
+
     
+/* 📱 Mobile et Tablette */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                width: 250px;
+                height: 100vh;
+                position: fixed;
+                z-index: 1000;
+            }
 
+            .sidebar.show {
+                transform: translateX(0);
+            }
 
-
-
-
-
-/* 🌍 RESPONSIVE DESIGN */
-/* 🖥️ Tablettes et écrans moyens */
-    @media (max-width: 1024px) {
-        .sidebar {
-            width: 220px; /* Réduit la taille de la barre latérale */
+    /* Bouton hamburger */
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1100;
         }
 
-        .content {
-            margin-left: 220px; /* Ajuste le contenu */
-            width: calc(100% - 220px);
+        .menu-btn span {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.3s;
         }
 
-        nav ul li a {
-            font-size: 14px; /* Réduit la taille des liens */
-        }
-    }
-
-    /* 📱 Mobiles (petits écrans) */
-    @media (max-width: 768px) {
-        .sidebar {
-            width: 100%; /* Barre latérale prend toute la largeur */
-            height: auto; /* Ajuste la hauteur */
-            position: relative;
-            padding: 10px;
+    /* Animation du menu */
+        .menu-btn.open span:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
         }
 
-        .sidebar img {
-            width: 70px; /* Réduit l'image de profil */
-            height: 75px;
+        .menu-btn.open span:nth-child(2) {
+            opacity: 0;
         }
 
-        .sidebar h2 {
-            font-size: 18px;
-        }
-
-        .content {
-            margin-left: 0; /* Supprime le décalage */
-            width: 100%;
-            padding: 10px;
-        }
-
-        nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 3px;
-        }
-
-        nav ul li a {
-            font-size: 14px;
-            padding: 5px 8px;
+        .menu-btn.open span:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
         }
     }
 
-    /* 📱 Très petits écrans (Smartphones) */
-    @media (max-width: 480px) {
-        .sidebar {
+/* 📦 CONTENU PRINCIPAL */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+/* Mode mobile */
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+/* Footer */
+        .sidebar footer {
+            margin-top: auto;
             text-align: center;
+            font-size: 12px;
+            color: #bbb;
         }
 
-        .sidebar h2 {
-            font-size: 16px;
-        }
 
-        nav ul {
-            flex-direction: column;
-            align-items: center;
-        }
 
-        nav ul li {
-            margin: 2px 0;
-        }
 
-        .content {
-            padding: 5px;
-        }
-    }
-
-/* 🏆 Footer Fixé en Bas */
-    .sidebar footer {
-        position: relative;
-        bottom: 10px;
-    }
 
 
         
@@ -1243,6 +1227,32 @@
     </style> 
 </head>
 <body>
+
+
+
+
+
+
+
+     <!-- Bouton Menu Hamburger -->
+     <button class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <aside class="sidebar">
 
