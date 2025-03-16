@@ -25,6 +25,9 @@
         }
 
         .sidebar {
+            background-image: url('header-practice-overview.jpg'); /* Remplacez par l'image de fond de votre choix */
+            background-size: cover;
+
             font-family: 'Times New Roman', Times, serif;  
             position: fixed; /* Fixe la barre latérale à gauche de la page */
             top: 0;
@@ -46,7 +49,7 @@
         }
 
         img{
-                width: 90px;
+                width: 85px;
                 height: 90px;
                 display: flex;
                 border-radius: 50px;
@@ -99,7 +102,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-image: url('azerty.jpg'); /* Remplacez par l'image de fond de votre choix */
+            background-image: url('technologie-noir-abstrait_1017-710.avif'); /* Remplacez par l'image de fond de votre choix */
             background-size: cover;
             background-position: center;
         }
@@ -1000,7 +1003,116 @@
         }
 
 
-       
+   
+        
+
+
+        /* Bloc de documentations */
+
+        /* Réinitialisation */
+        * {
+            margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        /* Style du header (bannière) */
+        .banner {
+            background: url('background.jpeg') no-repeat center center/cover;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Effet d'ombre pour rendre le texte plus lisible */
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Légère opacité pour mieux voir le texte */
+        }
+
+        /* Style du texte */
+        .banner h1 {
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            z-index: 1;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .banner h1 {
+                font-size: 35px;
+            }
+        }
+
+
+
+        /* Grille de documentations  */
+        header {
+            background-color: #162447;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .grid-item {
+        
+            background-color: #162447;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .grid-item img {
+        
+            width: 100%;
+            height: 70%;
+            border-radius: 8px;
+        }
+
+        .grid-item p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color :white;
+        }
+
+        /* Effet au survol */
+        .grid-item:hover {
+            transform: scale(1.05);
+            background-color: #0f3460;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
         
         
 
@@ -1033,8 +1145,8 @@
 
     <aside class="sidebar">
 
-        <img src="phtoto-de-profil.jpg" alt="photo"/>
-        <h2>koffi wilfried ZUGBEDE</h2>
+        <img src="photo-de-profil-zug.jpg" alt="photo"/>
+        <h2>Koffi Wilfried ZUGBEDE</h2>
         
         <nav>
             <ul>
@@ -1043,27 +1155,32 @@
                 <li><a href="#bts">Qu'est ce que le BTS SIO ?</a></li>
                 <li><a href="#parcourspro"class="nav-link" >Parcours Professionnels</a></li>
                 <li><a href="#education"class="nav-link" >Parcours Scolaire</a></li>
+                <li><a href="#doc">Documentations</a></li>
                 <li><a href="#projet">Projets</a></li>
                 <li><a href="#Veille">Veille Technologique</a></li>
                 <li>
                     <a href="Annexe 6-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2023.pdf" target="_blank">Grilles de compétence</a>
+                    <ul class="submenu">
+                        <li><a href="Epreuve E6_reseaux.pdf" target="_blank">Epreuve E6 - Réseau</a></li>
+                        <li><a href="Epreuve E6_systeme.pdf">Epreuve E6 - Système</a></li>
+                    </ul>
                 </li>
                 
             </ul>
         </nav>
         <footer>
-            <p> 2024 koffi ZUGBEDE</p>
+            <p> 2025 koffi ZUGBEDE</p>
         </footer>
     </aside>
 
     <div class="content">
 
         <div id="acceuil" class="container">
-            <h1 class="title">koffi Wilfried ZUGBEDE</h1>
+            <h1 class="title">Koffi Wilfried ZUGBEDE</h1>
             <h2 class="subtitle">BIENVENUE SUR MON PORTFOLIO</h2><br>
 
             <section class="contact-section">
-                <h3>Je vous présente dans ce portfolio tout ce que j'ai pu acquérir et réaliser durant ces 2 ans de formation.</h3><br>
+                <h3>Ce portfolio met en avant l'ensemble des compétences que j'ai développées et des projets que j'ai réalisés au cours de mes deux années de formation.</h3><br>
                 <h3>Contactez-moi</h3>
                 <div class="contact-container">
                     <!-- Email -->
@@ -1086,7 +1203,7 @@
             
         </div>
 
-        <!-- Section À Propos -->
+<!-- Section À Propos -->
         <section id="propos" class="about-section">
             <h2>À Propos</h2>
             <div class="underline"></div>
@@ -1094,7 +1211,7 @@
             <p>Je suis <strong>Koffi ZUGBEDE</strong>, étudiant en deuxième année de <strong>BTS SIO</strong> (Services Informatiques aux Organisations), Option SISR (Solutions d'infrastructure, systèmes et réseaux), l'option spécialisée pour les systèmes et réseaux, au sein du <strong>CFA INGETIS</strong>. Je suis en initial .</p>
             <p>Actuellement diplômé du <strong>BAC D </strong> (scientifiques) et toujours en cours d'étude 🎓, je vous propose sur ce portfolio de retrouver ci-dessous les différentes études, et projet professionnel que j'ai pu entreprendre au sein de ma carrière.
                 Vous retrouverez ci-dessous mon CV ainsi que mes différents projets 👩‍💻</p>
-            <a href="ZUGBEDE Koffi - CV Alternance.pdf" class="cv-button" target="_blank">CV</a> <!-- Remplacez 'votre_cv.pdf' par le lien vers votre CV -->   
+            <a href="koffi ZUGBEDE cv.pdf" class="cv-button" target="_blank">CV</a> <!-- Remplacez 'votre_cv.pdf' par le lien vers votre CV -->   
         </section>
         <!-- section projet professionnel-->
         <section class="project-section">
@@ -1150,7 +1267,7 @@
             </div>
         </section>
 
-        <!--section bloc experience professionnelle-->
+<!--section bloc experience professionnelle-->
         
         <section id="parcourspro" class="experience-section">
             <h2>MON PARCOURS PROFESSIONNELS</h2>
@@ -1219,7 +1336,7 @@
         </section>
         </a>    
 
-        <!--bloc formation education-->
+<!--bloc formation education-->
         <section id="education" class="education-section">
             <h2>MON PARCOURS SCOLAIRE</h2>
             <!-- Formation 1 -->
@@ -1266,7 +1383,57 @@
                 <p class="institution">Lycée Lomé Cité - Togo</p>
             </div>
         </section>
-       <!--bloc projet-->
+
+
+<!--bloc documentations-->
+        <section id="doc" class="about-section">
+            <header class="banner">
+                <h1>Documentations</h1>
+            </header>
+            <div class="grid-container">
+
+                <div class="grid-item">
+                    <a href="Doc_installation_dns_linux.pdf" target="_blank">
+                        <img src="dnslinux.jpeg" alt="Installation Server DNS ">
+                        <p>Installation <br> Server DNS Linux </p>
+                    </a>   
+                </div>
+
+                <div class="grid-item">
+                    <a href="Doc_cisco-nat.pdf" target="_blank">
+                        <img src="NAT.jpeg" alt="Mise en place NAT">
+                        <p>Mise en place <br> NAT</p>
+                    </a>
+                </div>
+
+                <div class="grid-item">
+                    <a href="Doc_cisco-statique.pdf" target="_blank">
+                        <img src="routage.jpeg" alt="Mise en place Routage statique ">
+                        <p>Mise en place <br> Routage Statique</p>
+                    </a>    
+                </div>
+
+                <div class="grid-item">
+                    <a href="Doc_cisco_vlan.pdf" target="_blank">
+                        <img src="vlan_image.jpeg" alt="Mise en place VLAN">
+                        <p>Mise en place <br>VLAN</p>
+                    </a>
+                </div>
+
+                <div class="grid-item">
+                    <a href="Doc-Installation Debian 12.1.0.pdf" target="_blank">
+                        <img src="debain12.jpeg" alt="Mise en place Debian12">
+                        <p>Mise en place <br> Debian 12</p>
+                    </a>
+                </div>
+
+                
+            </div>
+        </section>
+    
+
+
+<!--bloc projet-->
         <section id="projet" class="projects-section">
             <h2>Projets</h2>
             <p>Vous trouverez ci-dessous tous les anciens projets sur lesquels j'ai travaillé jusqu'à présent.</p>
@@ -1321,7 +1488,7 @@
 
                             <!-- Inclusion du contenu d'Entete_date1.html -->
                             <div class="project-subproject">
-                                <a href="Entete_date1.html">Cliquez ici</a>
+                                <a href="Entete_date1.html">Cliquez ici pour voir le projet</a>
                             </div>
                         </div>
                     </div>
@@ -1367,7 +1534,7 @@
             </div>
         </section>
 
-        <!-- Bloc Mes Connaissances  -->
+<!-- Bloc Mes Connaissances  -->
 
         <section class="skills-section">
             <h2>MES CONNAISSANCES</h2>
@@ -1407,23 +1574,15 @@
         </section>
         
 
-
-
-
-
-
-
-
-
-
-        
+<!-- Bloc veille technologique  -->
+ 
         <section id="Veille" class="veille-section">
-            <h1>VEILLE TECHNONLOGIQUE</h1>
+            <h1>VEILLE TECHNOLOGIQUE</h1>
                 <h2>L'importance de la veille technologique</h2>
                 <div class="underline"></div>
-                <p>Dans le domaine de la technologie, les avancées se produisent rapidement. Être à jour avec les dernières tendances et les innovations vous permettra de rester compétitif sur le marché du travail.</p>
-                <p>La veille technologique vous permet d’anticiper les évolutions et les changements. Cela vous donne un avantage pour vous adapter rapidement aux nouvelles technologies et rester pertinent dans notre métier. En restant informé des nouvelles technologies, vous pouvez continuer à développer et à améliorer vos compétences techniques. Cela vous rendra plus polyvalent et capable de relever de nouveaux défis.</p>
-                <p>La veille technologique vous aide à repérer les opportunités professionnelles, comme de nouveaux projets, des collaborations potentielles ou des postes qui nécessitent des compétences spécifiques. Être au courant des dernières avancées technologiques vous aide à identifier et à prévenir les risques potentiels, tels que les failles de sécurité ou les obsolescences technologiques.</p>
+                <p>Dans le domaine de la technologie, les avancées se produisent rapidement. Être à jour avec les dernières tendances et les innovations nous permettra de rester compétitif sur le marché du travail.</p>
+                <p>La veille technologique nous permet d’anticiper les évolutions et les changements. Cela nous donne un avantage pour nous adapter rapidement aux nouvelles technologies et rester pertinent dans notre métier. En restant informé des nouvelles technologies, nous pouvons continuer à développer et à améliorer nos compétences techniques. Cela nous rendra plus polyvalent et capable de relever de nouveaux défis.</p>
+                <p>La veille technologique nous aide à repérer les opportunités professionnelles, comme de nouveaux projets, des collaborations potentielles ou des postes qui nécessitent des compétences spécifiques. Être au courant des dernières avancées technologiques nous aide à identifier et à prévenir les risques potentiels, tels que les failles de sécurité ou les obsolescences technologiques.</p>
  
         </section>
 
@@ -1481,11 +1640,7 @@
                 </div>
             </div>
         </section>
-    
-        
 
-            
-            
        
         
     </div>
